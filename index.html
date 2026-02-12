@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Trabajo 2026-2028 | Elvis Santos Barzola</title>
+    <style>
+        /* Estilos Generales - Colores Carmelitas y Sobrios */
+        :root {
+            --primary: #4e3629; /* Marrón oscuro */
+            --secondary: #d4af37; /* Dorado */
+            --light: #fdfbf7; /* Crema suave */
+            --dark: #2c2c2c;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        /* Navegación */
+        nav {
+            background-color: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        nav a:hover { color: var(--secondary); }
+
+        /* Portada (Hero) */
+        header {
+            background: linear-gradient(rgba(78, 54, 41, 0.9), rgba(78, 54, 41, 0.8)), url('https://via.placeholder.com/1200x600?text=Fondo+Carmelita'); /* Puedes cambiar esta URL por una foto real más adelante */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        header h2 { font-size: 1.5rem; font-weight: normal; color: var(--secondary); margin-top: 0; }
+        header .badge { 
+            background-color: var(--secondary); 
+            color: var(--primary); 
+            padding: 5px 15px; 
+            border-radius: 20px; 
+            font-weight: bold; 
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* Secciones */
+        section { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
+        h2.section-title { 
+            text-align: center; 
+            color: var(--primary); 
+            border-bottom: 3px solid var(--secondary); 
+            display: inline-block; 
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+        .center-title-container { text-align: center; }
+
+        /* Presentación */
+        .intro-box {
+            background: white;
+            padding: 30px;
+            border-left: 5px solid var(--secondary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Pilares */
+        .pilares-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .pilar-card {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .pilar-card:hover { transform: translateY(-5px); }
+        .pilar-icon { font-size: 2rem; color: var(--secondary); margin-bottom: 10px; display: block; }
+
+        /* Plan de Trabajo */
+        .plan-category { margin-bottom: 40px; }
+        .plan-category h3 { color: var(--primary); background-color: #e6e1d8; padding: 10px; border-radius: 5px; }
+        .plan-list { list-style-type: none; padding: 0; }
+        .plan-list li { 
+            background: white; 
+            margin-bottom: 10px; 
+            padding: 15px; 
+            border-radius: 5px; 
+            border-left: 4px solid var(--primary);
+        }
+        .plan-list strong { color: #8a6d3b; }
+
+        /* Tabla de Candidatos */
+        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: var(--primary); color: white; }
+        tr:hover { background-color: #f5f5f5; }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            nav a { display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#presentacion">Presentación</a>
+        <a href="#pilares">Pilares</a>
+        <a href="#plan">Plan de Trabajo</a>
+        <a href="#equipo">Equipo</a>
+    </nav>
+
+    <header id="inicio">
+        <h1>Elvis Santos Barzola</h1>
+        <h2>Candidato a Capataz | 2026 - 2028</h2>
+        <p>Décima Cuarta Cuadrilla de la HSVCL</p>
+        <div class="badge">LEMA: MONASTERIAL</div>
+    </header>
+
+    <section id="presentacion">
+        <div class="center-title-container">
+            <h2 class="section-title">Presentación</h2>
+        </div>
+        <div class="intro-box">
+            <p><strong>Pertenecer a una "CUADRILLA" no es una cuestión de número de integrantes, sino de la calidad de los HERMANOS que la conforman.</strong></p>
+            <p>¿Cómo logramos ser una "GRAN CUADRILLA"? La respuesta nace de una directiva comprometida a promover una festividad digna en honor a nuestra excelsa Patrona, garantizando una masiva concurrencia de fieles en sus recorridos procesionales.</p>
+            <p>Ansiamos ser un grupo que trabaje de manera organizada y ordenada. Nuestra verdadera diferencia es una propuesta cimentada en la gestión eficiente.</p>
+        </div>
+    </section>
+
+    <section id="pilares">
+        <div class="center-title-container">
+            <h2 class="section-title">Nuestros Pilares</h2>
+        </div>
+        <div class="pilares-grid">
+            <div class="pilar-card">
+                <span class="pilar-icon">❤</span>
+                <h3>Amor y Fe</h3>
+                <p>A nuestra Santísima Madre.</p>
+            </div>
+            <div class="pilar-card">
+                <span class="pilar-icon">🤝</span>
+                <h3>Respeto</h3>
+                <p>Y Trabajo en Equipo.</p>
+            </div>
+            <div class="pilar-card">
+                <span class="pilar-icon">📈</span>
+                <h3>Eficiencia</h3>
+                <p>Administración transparente.</p>
+            </div>
+            <div class="pilar-card">
+                <span class="pilar-icon">🤲</span>
+                <h3>Humildad</h3>
+                <p>Y Vocación de Servicio.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="plan">
+        <div class="center-title-container">
+            <h2 class="section-title">Plan de Trabajo</h2>
+        </div>
+
+        <div class="plan-category">
+            <h3>🏛 Cuadrilla</h3>
+            <ul class="plan-list">
+                <li><strong>Difusión de la Fe:</strong> Promover el culto mediante participación activa y rezo del Santo Rosario con imagen peregrina.</li>
+                <li><strong>Cuadrilla Infantil:</strong> Fomentar la integración de hijos y sobrinos ("semillero de fe").</li>
+                <li><strong>Vínculo Institucional:</strong> Afianzar relaciones con el Monasterio.</li>
+                <li><strong>Banderín Carmelitano:</strong> Trabajar bajo criterios claros para obtener esta distinción.</li>
+                <li><strong>Identidad:</strong> Celebración simbólica de cumpleaños del mes para integrar a la "familia 14".</li>
+                <li><strong>Festividad de Julio:</strong> Solicitar Misa de Guardia en nuestro aniversario y homenaje el día 29.</li>
+                <li><strong>50 Aniversario:</strong> Inicio de recolección de fondos para las "Bodas de Oro".</li>
+            </ul>
+        </div>
+
+        <div class="plan-category">
+            <h3>✝ Culto y Devoción</h3>
+            <ul class="plan-list">
+                <li><strong>Formación Espiritual:</strong> Charla magistral para postulantes y guía del Padre Espiritual.</li>
+                <li><strong>Talleres:</strong> Programas de inducción para nuevos integrantes (adultos e infantil).</li>
+            </ul>
+        </div>
+
+        <div class="plan-category">
+            <h3>🤲 Asistencia Social</h3>
+            <ul class="plan-list">
+                <li><strong>Obras de Impacto:</strong> Acciones sociales en lugares necesitados.</li>
+                <li><strong>Desayunos Carmelitanos:</strong> Potenciar el programa para adultos mayores vulnerables.</li>
+                <li><strong>Duelo y Salud:</strong> Acompañamiento, arreglos florales y ayuda mutua en salud.</li>
+            </ul>
+        </div>
+
+        <div class="plan-category">
+            <h3>📢 Comunicación y Administración</h3>
+            <ul class="plan-list">
+                <li><strong>Medios:</strong> Periódico Mural, Boletín "NOTICARMEN 14" y Redes Sociales activas.</li>
+                <li><strong>Gestión:</strong> Presupuesto anual detallado y modernización con recibos electrónicos.</li>
+                <li><strong>Historia:</strong> Registro de donaciones y digitalización de documentos.</li>
+                <li><strong>Padrón:</strong> Sinceramiento del padrón de hermanos.</li>
+            </ul>
+        </div>
+
+        <div class="plan-category">
+            <h3>⚽ Autogestión y Deporte</h3>
+            <ul class="plan-list">
+                <li><strong>Cafetería:</strong> Turnos para captar fondos.</li>
+                <li><strong>Integración:</strong> Campeonatos de Sapo y Fulbito.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="equipo">
+        <div class="center-title-container">
+            <h2 class="section-title">Lista de Candidatos</h2>
+        </div>
+        <p style="text-align: center; margin-bottom: 20px;">Un equipo comprometido con el servicio.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cargo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Elvis Santos Barzola</td>
+                    <td><strong>Capataz</strong></td>
+                </tr>
+                <tr>
+                    <td>Cesar Ortega Reyes</td>
+                    <td>Sub-Capataz</td>
+                </tr>
+                <tr>
+                    <td>Cesar Chang Paico</td>
+                    <td>Fiscal</td>
+                </tr>
+                <tr>
+                    <td>Marcos Arteaga Fernandez</td>
+                    <td>Tesorero</td>
+                </tr>
+                <tr>
+                    <td>Julio Michilena Villena</td>
+                    <td>Secretario</td>
+                </tr>
+                <tr>
+                    <td>Jose Herrera Wong</td>
+                    <td>Asistencia Social</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>#ElPerúEsCarmelita | 14 Monasterial</p>
+        <p>Trabajando por amor a nuestra madre del Carmen. ¡Adelante Familia 14!</p>
+        <p>&copy; 2026-2028 Gestión Elvis Santos Barzola</p>
+    </footer>
+
+</body>
+</html>
