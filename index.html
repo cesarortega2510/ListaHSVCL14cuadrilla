@@ -4,290 +4,376 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan de Trabajo 2026-2028 | Elvis Santos Barzola</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        /* Estilos Generales - Colores Carmelitas y Sobrios */
         :root {
-            --primary: #4e3629; /* Marrón oscuro */
+            --primary: #4e3629; /* Marrón Carmelita */
             --secondary: #d4af37; /* Dorado */
-            --light: #fdfbf7; /* Crema suave */
+            --light: #f9f7f2; /* Crema suave */
             --dark: #2c2c2c;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+        
+        * { box-sizing: border-box; }
+        
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 0;
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
         }
-        
-        /* Navegación */
+
+        /* NAVBAR */
         nav {
             background-color: var(--primary);
+            color: white;
             padding: 1rem;
             position: sticky;
             top: 0;
             z-index: 1000;
-            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        nav a {
+        .nav-brand { font-weight: bold; font-size: 1.2rem; }
+        .nav-links a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            margin-left: 20px;
             font-size: 0.9rem;
             text-transform: uppercase;
+            transition: color 0.3s;
         }
-        nav a:hover { color: var(--secondary); }
+        .nav-links a:hover { color: var(--secondary); }
 
-        /* Portada (Hero) */
+        /* HERO SECTION */
         header {
-            background: linear-gradient(rgba(78, 54, 41, 0.9), rgba(78, 54, 41, 0.8)), url('https://via.placeholder.com/1200x600?text=Fondo+Carmelita'); /* Puedes cambiar esta URL por una foto real más adelante */
+            background: linear-gradient(rgba(78, 54, 41, 0.85), rgba(78, 54, 41, 0.7)), url('https://img.freepik.com/foto-gratis/fondo-textura-papel-marron-claro-abstracto_1017-25211.jpg?w=1380');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 100px 20px;
             text-align: center;
+            padding: 100px 20px;
         }
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        header h2 { font-size: 1.5rem; font-weight: normal; color: var(--secondary); margin-top: 0; }
-        header .badge { 
-            background-color: var(--secondary); 
-            color: var(--primary); 
-            padding: 5px 15px; 
-            border-radius: 20px; 
-            font-weight: bold; 
+        header h1 { font-size: 3rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        header h2 { font-size: 1.5rem; font-weight: 300; margin-top: 10px; color: var(--secondary); }
+        .lema-badge {
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
             display: inline-block;
             margin-top: 20px;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
         }
 
-        /* Secciones */
-        section { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
-        h2.section-title { 
-            text-align: center; 
-            color: var(--primary); 
-            border-bottom: 3px solid var(--secondary); 
-            display: inline-block; 
-            padding-bottom: 10px;
+        /* SECCIONES GENERALES */
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2rem;
             margin-bottom: 40px;
+            position: relative;
         }
-        .center-title-container { text-align: center; }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 10px auto 0;
+        }
 
-        /* Presentación */
-        .intro-box {
+        /* PRESENTACIÓN (Card estilo institucional) */
+        .intro-card {
             background: white;
-            padding: 30px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
             border-left: 5px solid var(--secondary);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: justify;
         }
 
-        /* Pilares */
+        /* PILARES (Grid de Tarjetas) */
         .pilares-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
         .pilar-card {
             background: white;
-            padding: 20px;
+            padding: 30px;
+            border-radius: 10px;
             text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        .pilar-card:hover { transform: translateY(-10px); }
+        .pilar-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        .pilar-title { font-weight: bold; font-size: 1.2rem; margin-bottom: 10px; }
+
+        /* PLAN DE TRABAJO (Acordeón Moderno) */
+        .plan-item {
+            background: white;
+            margin-bottom: 15px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .pilar-card:hover { transform: translateY(-5px); }
-        .pilar-icon { font-size: 2rem; color: var(--secondary); margin-bottom: 10px; display: block; }
-
-        /* Plan de Trabajo */
-        .plan-category { margin-bottom: 40px; }
-        .plan-category h3 { color: var(--primary); background-color: #e6e1d8; padding: 10px; border-radius: 5px; }
-        .plan-list { list-style-type: none; padding: 0; }
-        .plan-list li { 
-            background: white; 
-            margin-bottom: 10px; 
-            padding: 15px; 
-            border-radius: 5px; 
-            border-left: 4px solid var(--primary);
+        .plan-header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .plan-list strong { color: #8a6d3b; }
+        .plan-header:hover { background-color: #3b281f; }
+        .plan-content {
+            padding: 20px;
+            display: none; /* Se oculta por defecto */
+            border-top: 1px solid #eee;
+        }
+        .plan-content ul { padding-left: 20px; }
+        .plan-content li { margin-bottom: 10px; }
+        /* Checkbox hack para funcionalidad sin JS complejo */
+        .toggle-check { display: none; }
+        .toggle-check:checked + .plan-header + .plan-content { display: block; }
+        .toggle-check:checked + .plan-header .fa-chevron-down { transform: rotate(180deg); }
 
-        /* Tabla de Candidatos */
-        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background-color: var(--primary); color: white; }
-        tr:hover { background-color: #f5f5f5; }
+        /* TABLA EQUIPO */
+        .team-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .team-table th { background-color: var(--primary); color: white; padding: 15px; text-align: left; }
+        .team-table td { padding: 15px; border-bottom: 1px solid #eee; }
+        .team-table tr:last-child td { border-bottom: none; }
+        .role-badge {
+            background-color: #eee;
+            color: var(--dark);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
 
-        /* Footer */
+        /* FOOTER */
         footer {
             background-color: var(--dark);
-            color: white;
+            color: #ccc;
             text-align: center;
-            padding: 20px;
-            margin-top: 50px;
+            padding: 40px 20px;
+            margin-top: 60px;
         }
+        footer p { margin: 5px 0; font-size: 0.9rem; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            nav a { display: block; margin: 10px 0; }
+        @media (max-width: 768px) {
+            nav { justify-content: center; }
+            .nav-links { margin-top: 10px; width: 100%; text-align: center; }
+            .nav-links a { margin: 0 10px; display: inline-block; }
+            header h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#presentacion">Presentación</a>
-        <a href="#pilares">Pilares</a>
-        <a href="#plan">Plan de Trabajo</a>
-        <a href="#equipo">Equipo</a>
+        <div class="nav-brand">HSVCL - CUADRILLA 14</div>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#plan">Plan</a>
+            <a href="#equipo">Equipo</a>
+        </div>
     </nav>
 
     <header id="inicio">
         <h1>Elvis Santos Barzola</h1>
         <h2>Candidato a Capataz | 2026 - 2028</h2>
-        <p>Décima Cuarta Cuadrilla de la HSVCL</p>
-        <div class="badge">LEMA: MONASTERIAL</div>
+        <div class="lema-badge">MONASTERIAL #ElPerúEsCarmelita</div>
+        <br><br>
+        <p>Trabajando por amor a nuestra madre del Carmen. ¡Adelante Familia 14!</p>
     </header>
 
-    <section id="presentacion">
-        <div class="center-title-container">
-            <h2 class="section-title">Presentación</h2>
-        </div>
-        <div class="intro-box">
+    <section class="container">
+        <h2 class="section-title">Presentación</h2>
+        <div class="intro-card">
             <p><strong>Pertenecer a una "CUADRILLA" no es una cuestión de número de integrantes, sino de la calidad de los HERMANOS que la conforman.</strong></p>
-            <p>¿Cómo logramos ser una "GRAN CUADRILLA"? La respuesta nace de una directiva comprometida a promover una festividad digna en honor a nuestra excelsa Patrona, garantizando una masiva concurrencia de fieles en sus recorridos procesionales.</p>
-            <p>Ansiamos ser un grupo que trabaje de manera organizada y ordenada. Nuestra verdadera diferencia es una propuesta cimentada en la gestión eficiente.</p>
+            <p>¿Cómo logramos ser una "GRAN CUADRILLA"? La respuesta nace de una directiva comprometida a promover una festividad digna en honor a nuestra excelsa Patrona. Ansiamos ser un grupo que trabaje de manera organizada y ordenada. Nuestra verdadera diferencia es una propuesta cimentada en la gestión eficiente.</p>
         </div>
     </section>
 
-    <section id="pilares">
-        <div class="center-title-container">
-            <h2 class="section-title">Nuestros Pilares</h2>
-        </div>
+    <section class="container" style="background-color: #fff;">
+        <h2 class="section-title">Nuestros Pilares</h2>
         <div class="pilares-grid">
             <div class="pilar-card">
-                <span class="pilar-icon">❤</span>
-                <h3>Amor y Fe</h3>
+                <i class="fas fa-heart pilar-icon"></i>
+                <div class="pilar-title">Amor y Fe</div>
                 <p>A nuestra Santísima Madre.</p>
             </div>
             <div class="pilar-card">
-                <span class="pilar-icon">🤝</span>
-                <h3>Respeto</h3>
+                <i class="fas fa-users pilar-icon"></i>
+                <div class="pilar-title">Respeto</div>
                 <p>Y Trabajo en Equipo.</p>
             </div>
             <div class="pilar-card">
-                <span class="pilar-icon">📈</span>
-                <h3>Eficiencia</h3>
+                <i class="fas fa-chart-line pilar-icon"></i>
+                <div class="pilar-title">Eficiencia</div>
                 <p>Administración transparente.</p>
             </div>
             <div class="pilar-card">
-                <span class="pilar-icon">🤲</span>
-                <h3>Humildad</h3>
-                <p>Y Vocación de Servicio.</p>
+                <i class="fas fa-hands-helping pilar-icon"></i>
+                <div class="pilar-title">Humildad</div>
+                <p>Vocación de Servicio.</p>
             </div>
         </div>
     </section>
 
-    <section id="plan">
-        <div class="center-title-container">
-            <h2 class="section-title">Plan de Trabajo</h2>
+    <section id="plan" class="container">
+        <h2 class="section-title">Plan de Trabajo</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Haz clic en cada área para ver las propuestas.</p>
+
+        <div class="plan-item">
+            <input type="checkbox" id="area1" class="toggle-check">
+            <label for="area1" class="plan-header">
+                <span><i class="fas fa-landmark"></i> &nbsp; INSTITUCIONAL Y CUADRILLA</span>
+                <i class="fas fa-chevron-down"></i>
+            </label>
+            <div class="plan-content">
+                <ul>
+                    <li><strong>Difusión de la Fe:</strong> Promover el culto mediante participación activa y rezo del Santo Rosario con imagen peregrina.</li>
+                    <li><strong>Cuadrilla Infantil:</strong> Fomentar la integración de hijos y sobrinos ("semillero de fe").</li>
+                    <li><strong>Vínculo Institucional:</strong> Afianzar relaciones con el Monasterio.</li>
+                    <li><strong>Banderín Carmelitano:</strong> Trabajar bajo criterios claros para obtener esta distinción.</li>
+                    <li><strong>Identidad:</strong> Celebración simbólica de cumpleaños del mes para integrar a la "familia 14".</li>
+                    <li><strong>50 Aniversario:</strong> Inicio de recolección de fondos para las "Bodas de Oro".</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="plan-category">
-            <h3>🏛 Cuadrilla</h3>
-            <ul class="plan-list">
-                <li><strong>Difusión de la Fe:</strong> Promover el culto mediante participación activa y rezo del Santo Rosario con imagen peregrina.</li>
-                <li><strong>Cuadrilla Infantil:</strong> Fomentar la integración de hijos y sobrinos ("semillero de fe").</li>
-                <li><strong>Vínculo Institucional:</strong> Afianzar relaciones con el Monasterio.</li>
-                <li><strong>Banderín Carmelitano:</strong> Trabajar bajo criterios claros para obtener esta distinción.</li>
-                <li><strong>Identidad:</strong> Celebración simbólica de cumpleaños del mes para integrar a la "familia 14".</li>
-                <li><strong>Festividad de Julio:</strong> Solicitar Misa de Guardia en nuestro aniversario y homenaje el día 29.</li>
-                <li><strong>50 Aniversario:</strong> Inicio de recolección de fondos para las "Bodas de Oro".</li>
-            </ul>
+        <div class="plan-item">
+            <input type="checkbox" id="area2" class="toggle-check">
+            <label for="area2" class="plan-header">
+                <span><i class="fas fa-church"></i> &nbsp; CULTO Y DEVOCIÓN</span>
+                <i class="fas fa-chevron-down"></i>
+            </label>
+            <div class="plan-content">
+                <ul>
+                    <li><strong>Formación Espiritual:</strong> Charla magistral para postulantes y guía del Padre Espiritual.</li>
+                    <li><strong>Talleres:</strong> Programas de inducción para nuevos integrantes (adultos e infantil).</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="plan-category">
-            <h3>✝ Culto y Devoción</h3>
-            <ul class="plan-list">
-                <li><strong>Formación Espiritual:</strong> Charla magistral para postulantes y guía del Padre Espiritual.</li>
-                <li><strong>Talleres:</strong> Programas de inducción para nuevos integrantes (adultos e infantil).</li>
-            </ul>
+        <div class="plan-item">
+            <input type="checkbox" id="area3" class="toggle-check">
+            <label for="area3" class="plan-header">
+                <span><i class="fas fa-hand-holding-heart"></i> &nbsp; ASISTENCIA SOCIAL</span>
+                <i class="fas fa-chevron-down"></i>
+            </label>
+            <div class="plan-content">
+                <ul>
+                    <li><strong>Obras de Impacto:</strong> Acciones sociales en lugares necesitados.</li>
+                    <li><strong>Desayunos Carmelitanos:</strong> Potenciar el programa para adultos mayores vulnerables.</li>
+                    <li><strong>Duelo y Salud:</strong> Acompañamiento, arreglos florales y ayuda mutua en salud.</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="plan-category">
-            <h3>🤲 Asistencia Social</h3>
-            <ul class="plan-list">
-                <li><strong>Obras de Impacto:</strong> Acciones sociales en lugares necesitados.</li>
-                <li><strong>Desayunos Carmelitanos:</strong> Potenciar el programa para adultos mayores vulnerables.</li>
-                <li><strong>Duelo y Salud:</strong> Acompañamiento, arreglos florales y ayuda mutua en salud.</li>
-            </ul>
+        <div class="plan-item">
+            <input type="checkbox" id="area4" class="toggle-check">
+            <label for="area4" class="plan-header">
+                <span><i class="fas fa-bullhorn"></i> &nbsp; COMUNICACIÓN Y ADMINISTRACIÓN</span>
+                <i class="fas fa-chevron-down"></i>
+            </label>
+            <div class="plan-content">
+                <ul>
+                    <li><strong>Medios:</strong> Periódico Mural, Boletín "NOTICARMEN 14" y Redes Sociales activas.</li>
+                    <li><strong>Gestión:</strong> Presupuesto anual detallado y recibos electrónicos.</li>
+                    <li><strong>Historia:</strong> Registro de donaciones y digitalización de documentos.</li>
+                    <li><strong>Padrón:</strong> Sinceramiento del padrón de hermanos.</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="plan-category">
-            <h3>📢 Comunicación y Administración</h3>
-            <ul class="plan-list">
-                <li><strong>Medios:</strong> Periódico Mural, Boletín "NOTICARMEN 14" y Redes Sociales activas.</li>
-                <li><strong>Gestión:</strong> Presupuesto anual detallado y modernización con recibos electrónicos.</li>
-                <li><strong>Historia:</strong> Registro de donaciones y digitalización de documentos.</li>
-                <li><strong>Padrón:</strong> Sinceramiento del padrón de hermanos.</li>
-            </ul>
-        </div>
-
-        <div class="plan-category">
-            <h3>⚽ Autogestión y Deporte</h3>
-            <ul class="plan-list">
-                <li><strong>Cafetería:</strong> Turnos para captar fondos.</li>
-                <li><strong>Integración:</strong> Campeonatos de Sapo y Fulbito.</li>
-            </ul>
+        <div class="plan-item">
+            <input type="checkbox" id="area5" class="toggle-check">
+            <label for="area5" class="plan-header">
+                <span><i class="fas fa-futbol"></i> &nbsp; AUTOGESTIÓN Y DEPORTE</span>
+                <i class="fas fa-chevron-down"></i>
+            </label>
+            <div class="plan-content">
+                <ul>
+                    <li><strong>Cafetería:</strong> Turnos para captar fondos.</li>
+                    <li><strong>Integración:</strong> Campeonatos de Sapo y Fulbito.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <section id="equipo">
-        <div class="center-title-container">
-            <h2 class="section-title">Lista de Candidatos</h2>
-        </div>
-        <p style="text-align: center; margin-bottom: 20px;">Un equipo comprometido con el servicio.</p>
-        <table>
+    <section id="equipo" class="container">
+        <h2 class="section-title">Lista de Candidatos</h2>
+        <table class="team-table">
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Cargo</th>
+                    <th>Nombre del Hermano</th>
+                    <th>Cargo al que postula</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Elvis Santos Barzola</td>
-                    <td><strong>Capataz</strong></td>
+                    <td><span class="role-badge" style="background:#4e3629; color:white;">CAPATAZ</span></td>
                 </tr>
                 <tr>
                     <td>Cesar Ortega Reyes</td>
-                    <td>Sub-Capataz</td>
+                    <td><span class="role-badge">Sub-Capataz</span></td>
                 </tr>
                 <tr>
                     <td>Cesar Chang Paico</td>
-                    <td>Fiscal</td>
+                    <td><span class="role-badge">Fiscal</span></td>
                 </tr>
                 <tr>
                     <td>Marcos Arteaga Fernandez</td>
-                    <td>Tesorero</td>
+                    <td><span class="role-badge">Tesorero</span></td>
                 </tr>
                 <tr>
                     <td>Julio Michilena Villena</td>
-                    <td>Secretario</td>
+                    <td><span class="role-badge">Secretario</span></td>
                 </tr>
                 <tr>
                     <td>Jose Herrera Wong</td>
-                    <td>Asistencia Social</td>
+                    <td><span class="role-badge">Asistencia Social</span></td>
                 </tr>
             </tbody>
         </table>
     </section>
 
     <footer>
-        <p>#ElPerúEsCarmelita | 14 Monasterial</p>
-        <p>Trabajando por amor a nuestra madre del Carmen. ¡Adelante Familia 14!</p>
         <p>&copy; 2026-2028 Gestión Elvis Santos Barzola</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p style="margin-top:20px; font-size: 0.8rem; opacity: 0.7;">Diseño web institucional</p>
     </footer>
 
 </body>
